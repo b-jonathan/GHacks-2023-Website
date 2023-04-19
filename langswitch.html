@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Garuda Hacks | Indonesia's Premier Global Hackathon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!--Lang-switch script-->
+  <script>
+    $(document).ready(function(){
+      $('[lang="id"]').hide()
+      $("#EN-greyout").click(function(){
+        $('[lang="id"]').hide()
+        $('[lang="en"]').show()
+      })
+      $("#ID-greyout").click(function(){
+        $('[lang="en"]').hide()
+        $('[lang="id"]').show()
+      })
+    })
+  </script>
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    @font-face{
+      font-family: League-Spartan-Bold;
+      src: url('static/LeagueSpartan-Bold.ttf') format('truetype');
+    }
+    @font-face{
+      font-family: League-Spartan-Regular;
+      src: url('static/LeagueSpartan-Regular.ttf') format('truetype');
+    }
+    @font-face{
+      font-family: Montserrat;
+      src: url('static/Montserrat-Bold.ttf') format('truetype');
+    }
+    @keyframes disappear{
+      from {opacity:1;}
+      to {opacity:0;}
+    }
+
+    #Ghackstitle{ 
+      font-family: Montserrat;
+      font-weight: bold;
+      font-size: 100px;
+      white-space:nowrap;
+    }
+    #Ghacksdate{
+      font-family: League-Spartan-Bold;
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 25px;
+      color: #424242;
+      white-space:nowrap;
+    }
+    #Ghacksrdy{
+      font-family: League-Spartan-Bold;
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 40px;
+      color: #640D14;
+      margin-top: 30px;
+      white-space:nowrap;
+    }
+    #heading-font{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 61px;
+      text-align: center;
+    }
+    #project-FAQ{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      color: black;
+      font-size: 22.6px;
+      line-height: 45px;
+    }
+    #project-FAQ::before{
+      content: url('info-mark.svg') ;
+      display: inline-block;
+      padding-right: 3px;
+      vertical-align: middle;
+    }
+    .grey-box-text{
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      color: black;
+      font-size: 22.6px;
+      line-height: 45px;
+    }
+    .navbartext{
+        font-family: League-Spartan-Regular;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 25px;
+        color: #2E2E2E;
+    }
+    .red-button{
+        width: 191.8px;
+        height: 62px;
+        font-family: League-Spartan-Regular;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 27px;
+        color:white ;
+        line-height: 25px;
+        background: #640D14;
+        box-shadow: 1px 1px 10px rgba(241, 173, 180, 0.5), inset 1px 1px 10px rgba(241, 173, 180, 0.5);
+        border-radius: 10px;
+    }
+    .project-track-button{
+        position:absolute;
+        width: 415px;
+        height: 525px;
+        margin-top: 60px;
+        background: #640D14;
+        box-shadow: 1px 1px 10px rgba(241, 173, 180, 0.5), inset 1px 1px 10px rgba(241, 173, 180, 0.5);
+        border-radius: 10px;
+        transition: 0.3s;
+        z-index:1;
+    }
+    .project-track-header{
+        position:absolute;
+        width: 415px;
+        height: 75px;
+        margin-top: 60px;
+        background: #640D14;
+        box-shadow: 1px 1px 10px rgba(241, 173, 180, 0.5), inset 1px 1px 10px rgba(241, 173, 180, 0.5);
+        border-radius: 10px 10px 0px 0px;
+        transition: 0.3s;
+        z-index:1;
+    }
+    .project-track-info{
+        position:absolute;
+        width: 415px;
+        height: 525px;
+        margin-top: 60px;
+        background: white;
+        box-shadow: 1px 1px 10px rgba(241, 173, 180, 0.5), inset 1px 1px 10px rgba(241, 173, 180, 0.5);
+        border-radius: 10px;
+        transition: 0.3s;
+        z-index:1;
+    }
+    .project-track-button:hover {opacity:0;}
+
+    .project-track-text{
+      margin-top:50px;
+      line-height:40px;
+      font-family: League-Spartan-Bold;
+      text-align: center;
+      font-weight: 800;
+      font-size: 50px;
+      color:white ;
+    }
+
+    .project-info-text{
+        margin-left:25px;
+        line-height:25px;
+        font-family: League-Spartan-Regular;
+        text-align: left;
+        font-weight: 600;
+        font-size: 22px;
+        color:black ;
+    }
+    .project-header-info{
+        margin-top:25px;
+        margin-left:35px;
+        line-height:5px;
+        font-family: League-Spartan-Bold;
+        text-align: center;
+        font-weight: 800;
+        font-size: 30px;
+        color:white ;
+    }
+    .flex-container{
+      display:flex;
+      justify-content: center;
+      border:1px;
+    }
+
+    .project-track-dot{
+      display: list-item;                                        
+      margin-left : 2em;
+    }
+    
+    .project-track-question::before{
+      content: url('question-mark.svg') ;
+      display: inline-block;
+      padding-right: 3px;
+      vertical-align: middle;
+    }
+    .FAQ-button{
+        font-family: League-Spartan-Regular;
+        margin-left:25%;
+        margin-top: 50px;
+        width: 40%;
+        height: 70px;
+        font-style: normal;
+        font-weight: 1000;
+        font-size: 22px;
+        text-align: left;
+        color:white ;
+        line-height: 25px;
+        background: #640D14;
+        background-image: url('downarrow.svg');
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 95%;
+        border-radius: 10px;
+        border-color: #640D14;
+        position: relative;
+        display: inline-block;
+    }
+
+    .FAQ-content {
+      display: none;
+      position: absolute;
+      color: black;
+      text-align: left;
+      width: 100.5%;
+      border-radius: 0px 0px 10px 10px;
+      background: white;
+      border-color: white;
+      margin-left:-7px;
+      margin-top:10px;
+      padding: 12px ;
+      z-index:-1;
+    }
+
+    .langbutton-select {
+      display: inline-block;
+      color: black;
+      font-family: League-Spartan-Bold;
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 27px;
+    }
+
+    .langbutton-greyout {
+      display: inline-block;
+      color: rgba(177,177,180,1);
+      font-family: League-Spartan-Bold;
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 27px;
+    }
+
+    .FAQ-button:focus  {
+      background-image: url('uparrow.svg');
+      border-radius: 10px 10px 0px 0px;
+
+    }
+    .FAQ-button:focus .FAQ-content	 {
+      display: inline-block;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body style="">
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand fixed-top" style="background: rgba(193, 193, 193, 0.5);height: 80px;">
+        <div class="container-fluid col-sm-1>
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Avatar Logo" class="rounded-pill" style ="margin-left:80px;width:80px;height: 80px;"> 
+            </a>
+        </div>
+        <div class="container-fluid col-sm-7" style="overflow-x: visible;margin-right: -20px">
+            <ul class="navbar-nav">
+                <li class="nav-item" style = "margin-left:25%;">
+                  <a class="nav-link navbartext" href="#">Home</a>
+                </li>
+                <li class="nav-item" style = "margin-left:25%;">
+                  <a class="nav-link navbartext" href="#project-track">Track</a>
+                </li>
+                <li class="nav-item" style = "margin-left:25%;">
+                  <a class="nav-link navbartext" href="#prize-pool">Prizes</a>
+                </li>
+                <li class="nav-item" style = "margin-left:25%;">
+                    <a class="nav-link navbartext" href="#FAQ">FAQ</a>
+                </li>
+                <li class="nav-item" style = "margin-left:25%;">
+                    <a class="nav-link navbartext" href="#Sponsors">Sponsors</a>
+                </li>
+              </ul>
+        </div>
+        <div class="container-fluid col-sm-2">
+            <button type="button" class="btn red-button" lang="en">Apply Now!</button>
+            <button type="button" class="btn red-button" lang="id">Daftar Sekarang!</button>
+        </div>
+        <div class="container-fluid col-sm-2">
+                <img src="banner.png" alt="Avatar Logo" style ="margin-top:175px;width:250px;height: 280px;position: absolute;"> 
+        </div>
+  </nav>
+  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x:visible;z-index:-1;">
+    <img src="landingpage.png" alt="Avatar Logo" style="min-width:100%;">
+  </div>
+
+  <!--Title Page-->
+  <div class="row">
+      <div class="container-fluid col-sm-4" style="top:200px;margin-left:100px;position:absolute;z-index:2;">
+        <h1 id="Ghackstitle">GARUDA<br>HACKS 4.0</h1>
+        <p id="Ghacksdate" lang="en">26-29 August 2023</p>
+        <p id="Ghacksdate" lang="id">26-29 Agustus 2023</p>
+        <p id="Ghacksrdy" lang="en">Ready to Build the Future?</p>
+        <p id="Ghacksrdy" lang="id">Siap Membangun Masa Depan?</p>
+        <button type="button" class="btn red-button" style="margin-bottom:20px;width: 350px;height: 70px" lang="en">
+          <img src="participant.svg" style="margin-right:6px;">
+          Register as Participant
+        </button>
+        <button type="button" class="btn red-button" style="margin-bottom:20px;width: 350px;height: 70px" lang="id">
+          <img src="participant.svg" style="margin-right:6px;">
+          Daftar sebagai Peserta
+        </button>
+        <button type="button" class="btn red-button" style="margin-bottom:20px;width: 350px;height: 70px" lang="en">
+          <img src="mentor.svg" style="margin-right:6px;">
+          Register as Member
+        </button>
+        <button type="button" class="btn red-button" style="margin-bottom:20px;width: 350px;height: 70px" lang="id">
+          <img src="mentor.svg" style="margin-right:6px;">
+          Daftar sebagai Mentor
+        </button>
+        <button type="button" class="btn red-button" style="margin-bottom:20px;width: 350px;height: 70px" lang="en">
+          <img src="heartshake.svg" style="margin-right:6px;">
+          Join us as a Sponsor
+        </button>
+        <button type="button" class="btn red-button" style="margin-bottom:20px;width: 350px;height: 70px" lang="id">
+          <img src="heartshake.svg" style="margin-right:6px;">
+          Daftar sebagai Sponsor
+        </button>
+      </div>
+      <div class="col-sm-8"></div>
+  </div>
+
+  <!--Lang Switch Buttons-->
+  <div style="position:fixed;bottom:8px;right:16px;z-index:4">
+    <div id="EN-button" class="langbutton-select" lang="en">EN</div>
+    <div id="EN-greyout" class="langbutton-greyout" lang="id">EN</div>
+    <div class="langbutton-select">/</div>
+    <div id="ID-button" class="langbutton-select" lang="id">ID</div>
+    <div id="ID-greyout" class="langbutton-greyout" lang="en">ID</div>
+  </div>
+
+  <!-- Project Track-->
+  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x: visible">
+    <img src="tile1.png" alt="Avatar Logo" style="min-width:100%;">
+  </div>
+  <div id="project-track" class="container-fluid" style="top:1200px;position:absolute;">
+    <h1 id="heading-font">Choose Your Project Track</h1>
+    <div class="row">
+      <div class="col-sm-4 flex-container">
+        <div class="project-track-button" style="z-index: 3;">
+          <p class="project-track-text">HEALTH</p>
+          <img src="beating-heart.svg" style="margin-left:5%;">
+        </div>
+        <div class="project-track-header" style="z-index: 2;">
+            <p class="project-header-info" style="display:inline-block;">
+                HEALTH
+                <img src="beating-heart.svg" style="width:35px;display:inline-block;margin-left:5px;position: relative;">
+            </p>
+        </div>
+        <div class="project-track-info" style="z-index: 1;" lang="en">
+            <p class="project-info-text" style="margin-top:100px">
+              Whether your approach is preventive or curative interventions, what you create can save and improve lives, allowing people to better themselves and others.
+            </p>
+            <p class=" project-info-text project-track-question">
+              How do we:
+            </p>
+            <p class=" project-info-text project-track-dot">
+              Educate people on healthy living practices?
+            </p>
+            <p class=" project-info-text project-track-dot">
+              Improve access to health regardless of socioeconomic status?
+            </p>
+            <p class=" project-info-text project-track-dot">
+              Raise awareness, and create conversations on mental health?
+            </p>
+        </div>
+        <div class="project-track-info" style="z-index: 1;" lang="id">
+          <p class="project-info-text" style="margin-top:100px">
+            Apakah solusi Anda intervensi preventif atau kuratif, apa yang Anda buat dapat menyelamatkan dan meningkatkan kehidupan, mendorong orang untuk memperbaiki diri mereka dan yang lain.
+          </p>
+          <p class=" project-info-text project-track-question">
+            Bagaimana kita:
+          </p>
+          <p class=" project-info-text project-track-dot">
+            Mendidik masyarakat tentang menjalani hidup sehat?
+          </p>
+          <p class=" project-info-text project-track-dot">
+            Meningkatkan akses ke kesehatan terlepas dari status sosial ekonomi?
+          </p>
+          <p class=" project-info-text project-track-dot">
+            Tingkatkan kesadaran, dan buat percakapan tentang kesehatan mental?
+          </p>
+      </div>
+      </div>
+      <div class="col-sm-4 flex-container">
+        <div class="project-track-button" style="z-index:3;">
+          <p class="project-track-text">SOCIAL GOOD</p>
+          <img src="scales.svg" style="margin-left:5%;">
+        </div> 
+        <div class="project-track-header" style="z-index: 2;">
+            <p class="project-header-info" style="display:inline-block;">
+                SOCIAL GOOD
+                <img src="scales.svg" style="width:35px;display:inline-block;margin-left:5px;position: relative;">
+            </p>
+        </div>
+        <div class="project-track-info" style="z-index: 1;" lang="en">
+              <p class="project-info-text" style="margin-top:100px">
+                We believe that each one of your solutions can create many important opportunities for Indonesians, regardless of creed, ethnicity, or gender, to survive and thrive.
+              </p>
+              <p class=" project-info-text project-track-question">
+                How do we:
+              </p>
+              <p class=" project-info-text project-track-dot">
+                Create fair and humane opportunities for all?
+              </p>
+              <p class=" project-info-text project-track-dot">
+                Educate people on systemic bias within society and improve equality?
+              </p>
+              <p class=" project-info-text project-track-dot">
+                Create a society where all Indonesians can thrive together?
+              </p>
+        </div>
+        <div class="project-track-info" style="z-index: 1;" lang="id">
+          <p class="project-info-text" style="margin-top:100px">
+            Kami percaya bahwa solusi Anda dapat menciptakan peluang bagi masyarakat Indonesia, terlepas dari kepercayaan, suku, atau jenis kelamin, untuk bertahan dan berkembang.
+          </p>
+          <p class=" project-info-text project-track-question">
+            Bagaimana kita:
+          </p>
+          <p class=" project-info-text project-track-dot">
+            Menciptakan peluang yang adil dan manusiawi untuk semua?
+          </p>
+          <p class=" project-info-text project-track-dot">
+            Mendidik orang tentang bias sistemik dalam masyarakat dan meningkatkan kesetaraan?
+          </p>
+          <p class=" project-info-text project-track-dot">
+            Menciptakan masyarakat di mana semua orang Indonesia dapat berkembang bersama?
+          </p>
+    </div>
+        </div>
+      <div class="col-sm-4 flex-container">
+        <div class="project-track-button" style="z-index:3;">
+          <p class="project-track-text">RURAL<br>DEVELOPMENT</p>
+          <img src="rural-graph.svg" style="margin-left:5%;">
+        </div>
+        <div class="project-track-header" style="z-index: 2;">
+            <p class="project-header-info" style="display:inline-block;">
+                RURAL DEVELOPMENT
+                <img src="rural-graph.svg" style="width:35px;display:inline-block;margin-left:5px;position: relative;">
+            </p>
+        </div> 
+        <div class="project-track-info" style="z-index: 1;" lang="en">
+              <p class="project-info-text" style="margin-top:100px">
+                The government's efforts brought internet connectivity to millions of Indonesians for the first time. This is just a stepping stone in rural development.
+              </p>
+              <p class=" project-info-text project-track-question">
+                How do we:
+              </p>
+              <p class=" project-info-text project-track-dot">
+                Integrate Indonesians living in rural areas into the digital economy?
+              </p>
+              <p class=" project-info-text project-track-dot">
+                Showcase the creativity and diversity of Indonesia's culture to the world?
+              </p>
+              <p class=" project-info-text project-track-dot">
+                Raise awareness and accelerate development to developing parts of Indonesia?
+              </p>
+         </div>
+         <div class="project-track-info" style="z-index: 1;" lang="id">
+          <p class="project-info-text" style="margin-top:100px">
+            Upaya pemerintah membawa konektivitas internet ke jutaan orang Indonesia untuk pertama kalinya. Ini hanyalah batu loncatan dalam pembangunan pedesaan.
+          </p>
+          <p class=" project-info-text project-track-question">
+            Bagaimana kita:
+          </p>
+          <p class=" project-info-text project-track-dot">
+            Mengintegrasikan masyarakat Indonesia yang tinggal di pedesaan ke ekonomi digital?
+          </p>
+          <p class=" project-info-text project-track-dot">
+            Menampilkan kreativitas dan keragaman budaya Indonesia kepada dunia?
+          </p>
+          <p class=" project-info-text project-track-dot">
+            Meningkatkan kesadaran dan mempercepat pembangunan ke wilayah-wilayah berkembang di Indonesia?
+          </p>
+     </div>
+        </div>    
+    <div style="height:625px"></div>
+    <div class="flex-container" style="padding:0;position:relative;top:0;margin-right: auto;margin-left:auto;width:90vw;background: rgba(217, 217, 217, 0.6);border-radius: 20px;">
+        <p id="project-FAQ" style="display:inline-block;" lang="en">
+            Each of the following 3 tracks will have no-code alternatives, the pitch competition tracks, where participants submit a 5-minute pitch video.<br>
+            <span style="margin-left:35px;">Check out</span>
+            <a href="#FAQ" style="color:black;">FAQ Section</a>
+            for more info!
+        </p>
+        <p id="project-FAQ" style="display:inline-block;" lang="id">
+          Masing-masing dari 3 trek berikut akan memiliki alternatif tanpa kode, trek kometisi pitch, di mana peserta mengirimkan video pitch berdurasi 5 menit.<br>
+            <span style="margin-left:35px;">Lihat</span>
+            <a href="#FAQ" style="color:black;">bagian FAQ</a>
+            untuk info lebih lanjut!
+        </p>
+    </div>
+  </div>
+  </div>
+ 
+
+  <!-- Prize Pool -->
+  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x: visible;z-index:1 ">
+    <img src="tile2.png" alt="Avatar Logo" style="min-width:100%;">
+  </div>
+  <div id="prize-pool" class="container-fluid" style="top:2200px;position:absolute;z-index: 2">
+    <h1 id="heading-font" style=" margin-top: 40px;">PRIZE POOL<br><span style="font-size:70px;">$20,000</span></h1>
+    
+    <div class="flex-container" style="position:relative;margin-right: auto;margin-left: auto;margin-top:40px;width: 1782px;height: 137px;background: rgba(217, 217, 217, 0.6);border-radius: 20px;">
+      <p class="grey-box-text" style="margin-top:20px;text-align:center;" lang="en">
+        No hackathon event is complete without the prizes to recognize your hard work!<br>
+        Stand a chance to win cash, a pitching session with Silicon Valley investors, an invitation from startup accelerator programs, and many more.
+      </p>
+      <p class="grey-box-text" style="margin-top:20px;text-align:center;" lang="id">
+        Tidak ada acara hackathon yang lengkap tanpa hadiah untuk menghargai kerja keras Anda!<br>
+        Raih kesempatan untuk memenangkan uang tunai, sesi pitching dengan investor Silicon Valley, undangan dari program akselerator startup, dan masih banyak lagi.
+      </p>
+      <img src="treasure.svg" style="position:absolute;display:block;margin: auto;left: 0;right: 0;top:150px">
+      <img src="coins.svg" style="position:absolute;display:block;margin: auto;left: 0;right: 0;top:-200px">
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x: visible;z-index: 1">
+    <img src="tile3.png" alt="Avatar Logo" style="min-width:100%;">
+  </div>
+  <div id="FAQ" class="container-fluid" style="top:3300px;position:absolute;z-index: 2">
+    <h1 id="heading-font" style="margin-top: 40px;">Frequently Asked Questions</h1>
+    <div class="flex-container" style="position:relative;margin-right:auto;margin-left:auto;margin-top:40px;width: 1782px;height: 137px;background: rgba(217, 217, 217, 0.6);border-radius: 20px;">
+      <p class="grey-box-text" style="margin-top: 20px;text-align:center;" lang="en">
+        We know you have a lot of questions, so check below for some of the most common questions we've received.<br>
+        For further questions, you may also contact us at 
+        <a href="#" style="color: black;">team@garudahacks.com</a>
+      </p>
+      <p class="grey-box-text" style="margin-top: 20px;text-align:center;" lang="id">
+        Kami tahu Anda memiliki banyak pertanyaan,jadi periksa di bawah untuk beberapa pertanyaan paling umum yang kami terima.<br>
+        Untuk pertanyaan lebih lanjut, Anda juga dapat menghubungi kami di 
+        <a href="#" style="color: black;">team@garudahacks.com</a>
+      </p>
+    </div>
+  <div class="row">
+    <div class="container-fluid col-sm-6" style="z-index: 0;">
+      <button type="button" class=" FAQ-button" >
+        <p style="margin-top: 12px;" lang="en">What is a hackathon?</p>
+        <p style="margin-top: 12px;" lang="id">Apa itu hackathon?</p>
+        <div class="FAQ-content">
+          <p lang="en">A hackathon is a programming competition in which competitors use technology to build innovative projects within 48 hours. There will be opportunities to win cool prizes, learn from our key-note speakers, and network with our sponsors.</p>
+          <p lang="id">Hackathon adalah kompetisi pemrograman di mana para pesaing menggunakan teknologi untuk membangun proyek inovatif dalam waktu 48 jam. Akan ada peluang untuk memenangkan hadiah keren, belajar dari pembicara utama kami, dan berjejaring dengan sponsor kami.</p>
+        </div>
+      </button>
+      <button type="button" class=" FAQ-button" >
+        <p style="margin-top: 12px;" lang="en">Where will it be hosted?</p>
+        <p style="margin-top: 12px;" lang="id">Di mana acara akan diadakan?</p>
+        <div class="FAQ-content">
+          <p lang="en">Garuda Hacks 3.0 will be hosted on August 26-28 2022, completely virtually. All you need is to create a Discord account to communicate with our Garuda Hacks community.</p>
+          <p lang="id">Garuda Hacks 3.0 akan diselenggarakan pada 26-28 Agustus 2022, sepenuhnya secara virtual. Yang Anda butuhkan hanyalah membuat akun Discord berkomunikasi dengan komunitas Garuda Hacks kami.</p>
+        </div>
+      </button>
+      <button type="button" class=" FAQ-button" >
+        <p style="margin-top: 12px;" lang="en">Who can participate?</p>
+        <p style="margin-top: 12px;" lang="id">Siapa yang dapat berpartisipasi?</p>
+        <div class="FAQ-content">
+          <p lang="en">Everyone can participate! We encourage anyone who is interested in learning more about Hackathons, programming, and the tech industry to join Garuda Hacks!</p>
+          <p lang="id">Setiap orang dapat berpartisipasi! Kami mendorong siapa pun yang tertarik untuk mempelajari lebih Ianjut tentang Hackathon, pemrograman, dan industri teknologi untuk bergabung dengan Garuda Hacks!</p>
+        </div>
+      </button>
+      <button type="button" class=" FAQ-button" >
+        <p style="margin-top: 12px;" lang="en">Do I have to know code?</p>
+        <p style="margin-top: 12px;" lang="id">Apakah saya harus tahu kode?</p>
+        <div class="FAQ-content">
+          <p lang="en">Nope! You can learn along the way or team up with experienced programmers. Skills such as designing, business planning, and etc are all going to impact the projects in various ways! Also, check our new pitch competition tracks!</p>
+          <p lang="id">Tldak! Anda dapat belajar sambil jalan atau bekerja sama dengan programmer berpengalaman. Keterampilan seperti mendesain, perencanaan bisnis, dan lain-lain semuanya akan berdampak pada proyek dengan berbagai cara! Juga, periksa trek kompetisi nada baru kami!</p>
+        </div>
+      </button>
+      <button type="button" class=" FAQ-button" >
+        <p style="margin-top: 12px;" lang="en">What is the finalist round?</p>
+        <p style="margin-top: 12px;" lang="id">Apa babak finalis?</p>
+        <div class="FAQ-content">
+          <p lang="en">The top 3 hacks for each project track (excluding pitch competition tracks) will qualify to the finalist round where each team takes another 48 hours to enhance their hacks and prepare a slide deck that they will pitch live on the Demo Day. More info included in handbook.</p>
+          <p lang="id">3 hacks teratas untuk setiap project track (tidak termasuk pitch competition track) akan IOIOS ke babak finalis di mana setiap tim membutuhkan waktu 48 jam lagi untuk menyempurnakan retasan mereka dan menyiapkan dek slide yang akan mereka lempar secara langsung pada Hari Demo. Info lebih lanjut disertakan dalam buku pegangan.</p>
+        </div>
+      </button>
+    </div>
+    <div class="container-fluid col-sm-6" style="z-index: 1;">
+      <button type="button" class=" FAQ-button" >
+        <p style="margin-top: 12px;" lang="en">How do I apply?</p>
+        <p style="margin-top: 12px;" lang="id">Bagaimana cara mendaftar?</p>
+        <div class="FAQ-content">
+          <p lang="en">You can apply as an individual or as a team (up to 4 participants max). If in any case, you are looking for team members, you can form teams with other participating hackers at the beginning of our event. Don’t worry, we will help you pair up with other hackers!</p>
+          <p lang="id">Anda dapat mendaftar sebagai individu atau sebagai tim (hingga maksimal 4 peserta). Jika Anda mencari anggota tim, Anda dapat membentuk tim dengan peretas lain yang berpartisipasi di awal acara kami. Jangan khawatir, kami akan membantu Anda berpasangan dengan peretas lain!</p>
+        </div>
+      </button>
+      <button type="button" class=" FAQ-button" >
+        <p style="margin-top: 12px;" lang="en">How much does it cost?</p>
+        <p style="margin-top: 12px;" lang="id">Berapa harga berpartisipasi?</p>
+        <div class="FAQ-content">
+          <p lang="en">Nothing at all!</p>
+          <p lang="id">Gratis!</p>
+        </div>
+      </button>
+      <button type="button" class=" FAQ-button" >
+        <p style="margin-top: 12px;" lang="en">How do we submit our projects?</p>
+        <p style="margin-top: 12px;" lang="id">Bagaimana cara kirim proyek saya?</p>
+        <div class="FAQ-content">
+          <p lang="en">You must submit your project's video demonstration through Devpost. Additionally, it is optional for you to submit your project's live website too.</p>
+          <p lang="id">Anda harus mengirimkan demonstrasi video proyek Anda melalui Devpost. Selain itu, Anda juga opsional untuk mengirimkan situs web langsung proyek Anda.</p>
+        </div>
+      </button>
+      <button type="button" class=" FAQ-button" >
+        <p style="margin-top: 12px;" lang="en">What can I make?</p>
+        <p style="margin-top: 12px;" lang="id">Apa yang bisa saya buat?</p>
+        <div class="FAQ-content">
+          <p lang="en">We welcome all software, hardware hacks that align with our tracks, as well as pitch videos for our pitch competition tracks.</p>
+          <p lang="id">Kami menerima semua perangkat lunak, peretasan perangkat keras yang selaras dengan trek kami, serta video pitch untuk trek kompetisi pitch kami.</p>
+        </div>
+      </button>
+      <button type="button" class=" FAQ-button" >
+        <p style="margin-top: 12px;" lang="en">What are the pitch tracks?</p>
+        <p style="margin-top: 12px;" lang="id">Apa trek nadanya?</p>
+        <div class="FAQ-content">
+          <p lang="en">For each of the 3 project tracks, we have additional no-code tracks as alternatives where participants submit a 5-minute pitch video, much like a pitch competition. One project cannot qualify for both a pitch competition track and a regular track. More info is included in the handbook.</p>
+          <p lang="id">Untuk masing-masing dari 3 trek proyek, kami memiliki trek tanpa kode tambahan sebagai alternatif di mana peserta mengirimkan video pitch 5 menit, seperti kompetisi pitch. Satu proyek tidak dapat memenuhi syarat untuk trek kompetisi pitch dan trek reguler.</p>
+        </div>
+      </button>
+    </div>
+  </div>
+</body>
+</html>
