@@ -21,6 +21,14 @@
       })
     })
   </script>
+  <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        var blur = 10 * Math.atan(0.005 * $(window).scrollTop())
+        $("#bg1,#bg2,#bg3,#bg4").css("-webkit-filter","blur("+blur+"px)")
+      })
+    })
+  </script>
   <link rel="icon" type="image/png" href="logo.png">
   <style>
     @font-face{
@@ -310,7 +318,7 @@
                 <img src="banner.png" alt="Avatar Logo" style ="margin-top:175px;width:250px;height: 280px;position: absolute;"> 
         </div>
   </nav>
-  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x:visible;z-index:-1;">
+  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x:visible;z-index:-1;" id="bg1">
     <img src="landingpage.png" alt="Avatar Logo" style="min-width:100%;">
   </div>
 
@@ -366,13 +374,13 @@
   </div>
 
   <!-- Project Track-->
-  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x: visible">
+  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x: visible" id="bg2">
     <img src="tile1.png" alt="Avatar Logo" style="min-width:100%;">
   </div>
   <div id="project-track" class="container-fluid" style="top:1200px;position:absolute;">
     <h1 id="heading-font" lang="en">Choose Your Project Track</h1>
     <h1 id="heading-font" lang="id">Pilihan Trek</h1>
-    <div class="row">
+    <div class="row" id="triggerblur">
       <div class="col-sm-4 flex-container">
         <div class="project-track-button" style="z-index: 3;">
           <p class="project-track-text">SUSTAINABILITY</p>
@@ -541,7 +549,7 @@
 </div>
 
   <!-- Prize Pool -->
-  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x: visible;z-index:1 ">
+  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x: visible;z-index:1 " id="bg3">
     <img src="tile2.png" alt="Avatar Logo" style="min-width:100%;">
   </div>
   <div id="prize-pool" class="container-fluid" style="top:2200px;position:absolute;z-index: 2">
@@ -562,7 +570,7 @@
   </div>
 
   <!-- FAQ -->
-  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x: visible;z-index: 1">
+  <div class="container-fluid" style ="padding:0px;position: relative;overflow-x: visible;z-index: 1" id="bg4">
     <img src="tile3.png" alt="Avatar Logo" style="min-width:100%;">
   </div>
   <div id="FAQ" class="container-fluid" style="top:3300px;position:absolute;z-index: 2">
