@@ -121,6 +121,18 @@
         border-radius: 10px;
     }
 
+    .black-button{
+        font-family: League-Spartan-Regular;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 27px;
+        color:white ;
+        line-height: 25px;
+        background: #242236;
+        box-shadow: 1px 1px 10px rgba(163, 163, 163, 0.5), inset 1px 1px 10px rgba(163, 163, 163, 0.75);
+        border-radius: 10px;
+    }
+
     .about-button{
       font-family: League-Spartan-Regular;
       box-sizing: border-box;
@@ -363,18 +375,26 @@
         </div>
         <div class="container-fluid col-sm-7" style="overflow-x: visible;margin-right: -20px">
             <ul class="navbar-nav">
-                <li class="nav-item" style = "margin-left:25%;">
+                <li class="nav-item" style = "margin-left:20%;">
                   <a class="nav-link navbartext" href="#">Home</a>
                 </li>
-                <li class="nav-item" style = "margin-left:25%;">
+                <li class="nav-item" style = "margin-left:20%;">
+                  <a class="nav-link navbartext" href="#about" lang="en">About</a>
+                  <a class="nav-link navbartext" href="#about" lang="id">Trek</a>
+                </li>
+                <li class="nav-item" style = "margin-left:15%;">
+                  <a class="nav-link navbartext" href="#how-it-works" lang="en" style="width:200px;">How It Works</a>
+                  <a class="nav-link navbartext" href="#project-track" lang="id">Trek</a>
+                </li>
+                <li class="nav-item" style = "margin-left:10%;">
                   <a class="nav-link navbartext" href="#project-track" lang="en">Track</a>
                   <a class="nav-link navbartext" href="#project-track" lang="id">Trek</a>
                 </li>
-                <li class="nav-item" style = "margin-left:25%;">
+                <li class="nav-item" style = "margin-left:20%;">
                   <a class="nav-link navbartext" href="#prize-pool" lang="en">Prizes</a>
                   <a class="nav-link navbartext" href="#project-track" lang="id">Hadiah</a>
                 </li>
-                <li class="nav-item" style = "margin-left:25%;">
+                <li class="nav-item" style = "margin-left:20%;">
                     <a class="nav-link navbartext" href="#FAQ">FAQ</a>
                 </li>
                 <!--
@@ -396,46 +416,55 @@
 
   <!--Title Page-->
   <div class="row">
-      <div class="container-fluid col-sm-4" style="top:200px;margin-left:100px;position:absolute;z-index:2;">
-        <h1 id="Ghackstitle">GARUDA<br>HACKS 4.0</h1>
-        <p id="Ghacksdate" lang="en">21-23 July 2023</p>
-        <p id="Ghacksdate" lang="id">21-23 Juli 2023</p>
-        <p id="Ghacksrdy" lang="en">Ready to Build the Future?</p>
-        <p id="Ghacksrdy" lang="id">Siap Membangun Masa Depan?</p>
-        <a href="https://airtable.com/shrrNZAo4mECqKid0" target="_blank">
-          <button type="button" class="btn red-button" style="margin-bottom:20px;width: 400px;height: 70px" lang="en">
-            <img src="participant.svg" style="margin-right:6px;">
-            Register as Participant
-          </button>
-          <button type="button" class="btn red-button" style="margin-bottom:20px;width: 400px;height: 70px" lang="id">
-            <img src="participant.svg" style="margin-right:6px;">
-            Daftar sebagai Peserta
-          </button>
-        </a>
-        <a href="https://airtable.com/shrYaNL0dMSdoElgm" target="_blank">
-          <button type="button" class="btn red-button" style="margin-bottom:20px;width: 400px;height: 70px" lang="en">
-            <img src="mentor.svg" style="margin-right:6px;">
-            Register to Volunteer 
-          </button>
-          <button type="button" class="btn red-button" style="margin-bottom:20px;width: 400px;height: 70px" lang="id">
-            <img src="mentor.svg" style="margin-right:6px;">
-            Daftar sebagai Volunteer
-          </button>
-        </a>
-        <a href="https://airtable.com/shrYaNL0dMSdoElgm" target="_blank">
-          <button type="button" class="btn red-button" style="margin-bottom:20px;width: 400px;height: 70px" lang="en">
-            <img src="heartshake.svg" style="margin-right:6px;">
-            Register to Volunteer 
-          </button>
-          <button type="button" class="btn red-button" style="margin-bottom:20px;width: 400px;height: 70px" lang="id">
-            <img src="heartshake.svg" style="margin-right:6px;">
-            Daftar sebagai Volunteer
-          </button>
-        </a>
+    <div class="container-fluid col-sm-6" style="width:100%;top:200px;margin-left:100px;position:absolute;z-index:2;">
+      <h1 id="Ghackstitle">GARUDA<br>HACKS 4.0</h1>
+      <p id="Ghacksdate" lang="en">21-23 July 2023</p>
+      <p id="Ghacksdate" lang="id">21-23 Juli 2023</p>
+      <p id="Ghacksrdy" lang="en">Ready to Build the Future?</p>
+      <p id="Ghacksrdy" lang="id">Siap Membangun Masa Depan?</p>
+      <div class="row" style="width:50%;height:100%">
+        <div class="container-fluid col-sm-5 red-button" style="display:flex;align-items:center;height:60px;width:36%;margin-left:1%">
+          <a href="https://airtable.com/shrrNZAo4mECqKid0" target="_blank">
+            <button type="button" class="btn project-info-text" style="color:white" lang="en">
+              <img src="puzzle.svg" style="margin-right:6px;">
+              Register to Hackathon
+            </button>
+          </a>
+        </div>
+        <div class="container-fluid col-sm-5 red-button" style="display:flex;align-items:center;height:60px;width:40%;margin-left:1%">
+          <a href="https://airtable.com/shrrNZAo4mECqKid0" target="_blank">
+            <button type="button" class="btn project-info-text" style="color:white" lang="en">
+              <img src="lightbulb.svg" style="margin-right:6px;">
+              Register to Speaker Series
+            </button>
+          </a>
+        </div>
+        <div class="container-fluid col-sm-2">
+        </div>
       </div>
-      <div class="col-sm-8"></div>
+      <div class="row" style="width:50%;height:100%;margin-top:1%">
+        <div class="container-fluid col-sm-5 black-button" style="display:flex;align-items:center;height:60px;width:36%;margin-left:1%">
+          <a href="https://airtable.com/shrrNZAo4mECqKid0" target="_blank">
+            <button type="button" class="btn project-info-text" style="color:white" lang="en">
+              <img src="mentor.svg" style="margin-right:6px;">
+              Register as a Mentor
+            </button>
+          </a>
+        </div>
+        <div class="container-fluid col-sm-5 black-button" style="display:flex;align-items:center;height:60px;width:40%;margin-left:1%">
+          <a href="https://airtable.com/shrYaNL0dMSdoElgm" target="_blank">
+            <button type="button" class="btn project-info-text" style="color:white" lang="en">
+              <img src="heartshake.svg" style="margin-right:6px;">
+              Join Us as a Volunteer
+            </button>
+          </a>
+        </div>
+        <div class="container-fluid col-sm-2">
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid col-sm-6"></div>
   </div>
-
   <!--Lang Switch Buttons-->
   <div style="position:fixed;bottom:8px;right:16px;z-index:4">
     <div id="EN-button" class="langbutton-select" lang="en">EN</div>
@@ -624,6 +653,14 @@
           <li class="how-works-li" lang="id">Pendaftaran dibuka pada tanggal <span style="font-weight: bold ;">1 Juni</span></li>
           <li class="how-works-li" lang="en">Decisions will be sent via email on a rolling basis until we have enough participants</li>
           <li class="how-works-li" lang="id">Keputusan akan dikirim melalui email secara bergiliran sampai peserta kami cukup</li>
+          <li class="how-works-li red-button" style="display:flex;align-items:center;height:40px;width:65%;margin-right:auto;margin-left:auto;margin-top:10%">
+            <a href="https://airtable.com/shrrNZAo4mECqKid0" target="_blank">
+              <button type="button" class="btn project-info-text" style="padding-left:0;color:white;" lang="en">
+                <img src="puzzle.svg" style="margin-right:6px;">
+                Register 
+              </button>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="container-fluid col-sm-2 about-button about-content" style="display:flex;align-items:center;width:15%;padding:1%;font-size:18px;">
@@ -651,15 +688,22 @@
     <div class="row" style="margin-top:3%;width:100%;height:200px;text-align: left;">
       <div class="container-fluid col-sm-1">       
       </div>
-      <div class="container-fluid col-sm-2 red-button" style="padding-top:0;padding-left:1%;width:15%;">
+      <div class="container-fluid col-sm-2 red-button" style="padding-top:1%;padding-left:1%;width:15%;">
         <p class="how-works-li" style="font-weight: 700;color:white">Speaker Series</p>
-        <p class="how-works-li" style="font-size:18px;font-weight: 300;margin-top:-3%;color:white">Hackathon area will be secured and closed off to the public</p>
-        <img src="signup.svg" style="padding-bottom:5%;width:60%;display:block;position:relative;margin:auto;">
+        <img src="discussion.png" style="padding-bottom:5%;width:60%;display:block;position:relative;margin:auto;">
       </div>  
       <div class="container-fluid col-sm-2 about-button about-content" style="display:flex;align-items:center;width:15%;padding:1%;font-size:18px;">
         <ul class="how-works-ul">
           <li class="how-works-li">Registration opens on <span style="font-weight: bold ;">June 1</span></li>
-          <li class="how-works-li">Decisions will be sent via email on a rolling basis until we have enough participants</li>
+          <li class="how-works-li">You can simply register and you’ll be invited to the event!</li>
+          <li class="how-works-li red-button" style="display:flex;align-items:center;height:40px;width:65%;margin-right:auto;margin-left:auto;margin-top:10%">
+            <a href="https://airtable.com/shrrNZAo4mECqKid0" target="_blank">
+              <button type="button" class="btn project-info-text" style="padding-left:0;color:white;" lang="en">
+                <img src="lightbulb.svg" style="margin-right:6px;">
+                Register 
+              </button>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="container-fluid col-sm-2 about-button about-content" style="display:flex;align-items:center;width:15%;padding:1%;font-size:18px;">
@@ -673,6 +717,7 @@
       <div class="container-fluid col-sm-2 about-button about-content" style="display:flex;align-items:center;width:15%;padding:1%;font-size:18px;">
         <ul class="how-works-ul">
           <li class="how-works-li">Feel free to come at any time of the event to network with companies and attend the company talks</li>
+          <li class="how-works-li">However, hackathon area will be secured and closed off to the public</li>
         </ul>
       </div>
       <div class="container-fluid col-sm-2 about-button about-content" style="display:flex;align-items:center;width:15%;padding:1%;font-size:18px;">
